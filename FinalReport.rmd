@@ -8,6 +8,10 @@ output: html_document
 ```{r include=FALSE,echo=FALSE}
 require(tidyverse)
 require(tigerstats)
+Females=filter(triUmp,gender== "F")  
+DrugUsers=filter(triUmp,DrugUser== "yes")
+
+
 triUmp <-read.csv(file="triUmpsal.csv",header=TRUE)
 ```
 
@@ -20,6 +24,14 @@ A new  preventative aids drug (triUmpsal) is under test in clinical trials. Cons
 <!-- Be sure to produce Descriptive Results and Inferential Results for both groups. !-->
 
 # Methods
+
+The questions are 1. Is the vaccine is effective for Drug users?, 2. Is the vaccine effective for women?.  
+
+$H_0$: The vaccine is not effective for Drug users. 
+$HA_0$: The vaccine is effective for Drug users.  
+
+$H_0$: The vaccine is not effective for women.  
+$HA_0$: The vaccine is effective for women.  
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed, for example sub-setting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
 
